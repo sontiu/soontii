@@ -1,0 +1,380 @@
+```css
+:root {
+    --bg: #07090c;
+    --card: #101318;
+    --card-hover: #171b21;
+    --border: #242a32;
+    --text: #f1f3f5;
+    --muted: #8c96a3;
+    --accent: #b98cff;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+    margin:0;
+    min-height:100vh;
+    background: url("/backk.png") center/cover fixed no-repeat;
+
+    color: var(--text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.page {
+    width: min(760px, 100%);
+    padding: 54px 22px 42px;
+}
+
+
+/* STATUS */
+
+.status {
+    color: #a5adb8;
+
+    font:
+        16px/1.4
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        monospace;
+
+    padding: 0 4px 28px;
+
+    border-bottom: 1px solid #1d2229;
+
+    margin-bottom: 34px;
+}
+
+
+.status span {
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+
+    background: #3bd16f;
+
+    border-radius: 50%;
+
+    margin-right: 12px;
+
+    box-shadow: 0 0 12px rgba(59, 209, 111, 0.45);
+}
+
+
+/* PROFILE */
+
+.profile {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    margin-bottom: 30px;
+}
+
+
+.avatar {
+    width: 128px;
+    height: 128px;
+
+    border: 1px solid var(--border);
+    border-radius: 24px;
+
+    background: #12161c;
+
+    overflow: hidden;
+
+    flex: none;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+h1 {
+    font-size: 36px;
+
+    margin: 0 0 10px;
+
+    letter-spacing: -1px;
+}
+
+
+.collectible {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+
+    margin-left: 6px;
+
+    vertical-align: middle;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 12px rgba(185, 140, 255, 0.35);
+}
+
+.collectible img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.handle {
+    color: var(--muted);
+
+    font:
+        24px
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        monospace;
+
+    font-weight: 400;
+}
+
+
+.bio {
+    color: var(--muted);
+
+    font-size: 20px;
+    line-height: 1.45;
+
+    margin: 0;
+}
+
+
+/* LINKS */
+
+.links {
+    display: grid;
+    gap: 14px;
+}
+
+
+.link {
+    min-height: 104px;
+
+    border: 1px solid #343b46;
+    border-radius: 19px;
+
+    background: var(--card);
+
+    padding: 20px 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    text-decoration: none;
+    color: inherit;
+
+    transition: 0.18s ease;
+}
+
+
+.link:hover {
+    background: var(--card-hover);
+
+    border-color: #39414c;
+
+    transform: translateY(-1px);
+}
+
+
+/* ICON */
+
+.icon {
+    width: 42px;
+    height: 42px;
+
+    flex: none;
+
+    display: grid;
+    place-items: center;
+
+    color: #9da6b2;
+}
+
+
+.icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+
+/* LINK CONTENT */
+
+.link-main {
+    min-width: 0;
+    flex: 1;
+}
+
+
+.link-title {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 22px;
+    font-weight: 500;
+
+    margin-bottom: 7px;
+}
+
+
+.tag {
+    font:
+        13px
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        monospace;
+
+    color: #929ba8;
+
+    border: 1px solid #343b46;
+
+    background: #1a1f27;
+
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    letter-spacing: 0.3px;
+}
+
+
+.link-desc {
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+
+/* ARROW */
+
+.arrow {
+    color: #7f8996;
+
+    font-size: 30px;
+
+    line-height: 1;
+}
+
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+
+    margin-top: 56px;
+
+    color: #5c6570;
+
+    font:
+        17px
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        monospace;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 560px) {
+
+    .page {
+        padding: 32px 16px;
+    }
+
+
+    .profile {
+        gap: 16px;
+    }
+
+
+    .avatar {
+        width: 92px;
+        height: 92px;
+
+        border-radius: 19px;
+
+        font-size: 42px;
+    }
+
+
+    h1 {
+        font-size: 27px;
+    }
+
+
+    .handle {
+        font-size: 18px;
+    }
+
+
+    .bio {
+        font-size: 16px;
+    }
+
+
+    .link {
+        min-height: 88px;
+
+        padding: 16px;
+    }
+
+
+    .link-title {
+        font-size: 19px;
+    }
+
+
+    .link-desc {
+        font-size: 15px;
+    }
+
+
+    .tag {
+        font-size: 11px;
+    }
+
+
+    .icon {
+        width: 34px;
+    }
+
+}
+```
